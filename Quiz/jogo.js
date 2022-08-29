@@ -3,6 +3,16 @@ let competenciaAtual = 0;
 let telaAtual = 0;
 let main = document.getElementById("main");
 
+let encode = (function () {
+	var amp = /\&/g, lt = /</g, gt = />/g, quot = /\"/g, apos = /\'/g;
+	window.encodeValue = function (x) {
+		return (x ? x.replace(amp, "&amp;").replace(lt, "&lt;").replace(gt, "&gt;").replace(quot, "&quot;").replace(apos, "&apos;") : "");
+	};
+	return function (x) {
+		return (x ? x.replace(amp, "&amp;").replace(lt, "&lt;").replace(gt, "&gt;") : "");
+	};
+})();
+
 function irParaAnterior() {
 	if (!competenciaAtual && !telaAtual)
 		return;
@@ -58,7 +68,13 @@ function renderTela() {
 }
 
 function iniciar() {
-	renderTela();
+	//renderTela();
+
+	let html = "";
+	html += `<p>${encode(competencias[0][0].titulo)}</p>`;
+
+	main.innerHTML = html;
+
 }
 
 // restante do código...
