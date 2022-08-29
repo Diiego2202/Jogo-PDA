@@ -78,3 +78,23 @@ body {
     font-weight: 500;
     cursor: pointer;
 }
+
+.cor_fundo2 {
+    background-color: #8b0000;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 10px;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    width: calc(100% + 2px);
+}
+
+.fundo1 {
+    background-color: #8b0000;
+    border-bottom: 1px solid #dadce0;
+    position: absolute;
+    width: 100%;
+    height: 106px;
+
+}
