@@ -18,7 +18,7 @@ competencias[3] = [
 		descricao: "...",
 		alternativas: [
 			{
-				descricao: "...",
+				descricao: "fim",
 				valor: 0 // Rubrica? Métrica de avaliação?...?
 			},
 			{
