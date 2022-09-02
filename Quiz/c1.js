@@ -3,26 +3,26 @@
 competencias[1] = [
 	{ // tela 0
 		urlImagem: "...",
-		titulo: "...",
-		descricao: "..."
+		titulo: "C1",
+		descricao: "descricaoC1-0"
 	},
 
 	{ // tela 1
 		urlImagem: "...",
-		descricao: "..."
+		descricao: "descricaoC1-1"
 	},
 
 	{ // tela 2
 		urlImagem: "...",
 		titulo: "...",
-		descricao: "...",
+		descricao: "descricaoC1-2",
 		alternativas: [
 			{
-				descricao: "...",
+				descricao: "alt1",
 				valor: 0 // Rubrica? Métrica de avaliação?...?
 			},
 			{
-				descricao: "...",
+				descricao: "alt2",
 				valor: 0 // Rubrica? Métrica de avaliação?...?
 			}
 		]

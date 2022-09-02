@@ -9,20 +9,20 @@ competencias[0] = [
 
 	{ // tela 1
 		urlImagem: "...",
-		descricao: "..."
+		descricao: "descricao 1"
 	},
 
 	{ // tela 2 - essa questão está muito esquisito...
 		urlImagem: "...",
-		titulo: "...",
-		descricao: "...",
+		titulo: "Titulo2",
+		descricao: "Descricao2",
 		alternativas: [
 			{
-				descricao: "...",
+				descricao: "2: alt1",
 				valor: 0 // Rubrica? Métrica de avaliação?...?
 			},
 			{
-				descricao: "...",
+				descricao: "2:alt2",
 				valor: 0 // Rubrica? Métrica de avaliação?...?
 			}
 		]
@@ -31,7 +31,7 @@ competencias[0] = [
 	{ // tela 3
 		urlImagem : "...",
 		título: "DESAFIO 2: [Combinar Teorias]",
-		descricao: "...",
+		descricao: "desc3",
 		alternativas: [
 			{
 				descricao: "[] É correto afirmar que a teoria da evolução agiu para que o ser fosse selecionado de tal forma. Desse modo, ela é a única teoria válida para a explicação sobre a existência desse ser.",

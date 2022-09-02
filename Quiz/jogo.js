@@ -23,6 +23,8 @@ function irParaAnterior() {
 		telaAtual = competencias[competenciaAtual].length - 1;
 	}
 
+	html = "";
+	main.innerHTML = html;
 	renderTela();
 }
 
@@ -31,16 +33,19 @@ function irParaProxima() {
 		return;
 
 	telaAtual++;
-	if (telaAtual >= (competencias[competenciaAtual].length - 1)) {
+	if (telaAtual > (competencias[competenciaAtual].length - 1)) {
 		competenciaAtual++;
 		telaAtual = 0;
 	}
-
+	
+	html = "";
+	main.innerHTML = html;
 	renderTela();
 }
 
 function renderTela() {
 	// @@@ fade in
+
 
 	const tela = competencias[competenciaAtual][telaAtual];
 
@@ -52,15 +57,23 @@ function renderTela() {
 
 	if (tela.titulo) {
 		// @@@ criar HTML para o título
+		html += `<p>${encode(competencias[competenciaAtual][telaAtual].titulo)}</p>`;
 	}
 
 	if (tela.descricao) {
 		// @@@ criar HTML para a descrição
+		html += `<p>${encode(competencias[competenciaAtual][telaAtual].descricao)}</p>`;
 	}
 
 	if (tela.alternativas && tela.alternativas.length) {
 		// @@@ criar HTML para as alternativas
+		for (let i = 0; i < tela.alternativas.length; i++) {
+			html += `<p>${encode(competencias[competenciaAtual][telaAtual].alternativas[i].descricao)}</p>`;
+		}
 	}
+
+	html += `<p><button class="btn-opcao" onclick="irParaAnterior()">Anterior</button></p>`;
+	html += `<p><button class="btn-opcao" onclick="irParaProxima()">Próxima</button></p>`;
 
 	main.innerHTML = html;
 
@@ -68,13 +81,7 @@ function renderTela() {
 }
 
 function iniciar() {
-	//renderTela();
-
-	let html = "";
-	html += `<p>${encode(competencias[0][0].titulo)}</p>`;
-
-	main.innerHTML = html;
-
+	renderTela();
 }
 
 // restante do código...
