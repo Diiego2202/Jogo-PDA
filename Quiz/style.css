@@ -4,8 +4,77 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html, body, .cover {
+    background: #8b0000; /* Safari for iOS and Opera for Android in fullscreen mode?!?! */
+}
+
+html, body, button, input, textarea, select, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem 0 0;
+}
+
 body {
-    background-color: #8b0000;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.cover {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 4px;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    transform-origin: left top;
+}
+
+#main {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #fff;
+    overflow: auto;
+}
+
+.cover, .fade {
+    opacity: 0;
+    -webkit-transition: opacity ease-in-out 0.5s;
+    -o-transition: opacity ease-in-out 0.5s;
+    transition: opacity ease-in-out 0.5s;
+}
+
+img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.fade:not(.visible) {
+    pointer-events: none;
 }
 
 .botao_inicio, .regras {

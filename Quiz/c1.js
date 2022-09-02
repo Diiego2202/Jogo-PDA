@@ -1,3 +1,5 @@
+"use strict";
+
 // Cada competência é um array de telas
 
 competencias[1] = [

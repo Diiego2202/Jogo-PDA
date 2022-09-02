@@ -1,7 +1,8 @@
+"use strict";
+
 let competencias = new Array(4);
 let competenciaAtual = 0;
 let telaAtual = 0;
-let main = document.getElementById("main");
 
 let encode = (function () {
 	var amp = /\&/g, lt = /</g, gt = />/g, quot = /\"/g, apos = /\'/g;
@@ -23,8 +24,6 @@ function irParaAnterior() {
 		telaAtual = competencias[competenciaAtual].length - 1;
 	}
 
-	html = "";
-	main.innerHTML = html;
 	renderTela();
 }
 
@@ -38,8 +37,6 @@ function irParaProxima() {
 		telaAtual = 0;
 	}
 	
-	html = "";
-	main.innerHTML = html;
 	renderTela();
 }
 
