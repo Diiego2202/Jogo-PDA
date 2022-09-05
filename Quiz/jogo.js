@@ -65,7 +65,7 @@ function renderTela() {
 	if (tela.alternativas && tela.alternativas.length) {
 		// @@@ criar HTML para as alternativas
 		for (let i = 0; i < tela.alternativas.length; i++) {
-			html += `<p ><input type="checkbox">${encode(competencias[competenciaAtual][telaAtual].alternativas[i].descricao)}</input></p>`;
+			html += `<p><label><input type="checkbox" class="checkbox"> ${encode(competencias[competenciaAtual][telaAtual].alternativas[i].descricao)}</input></label></p>`;
 		}
 	}
 

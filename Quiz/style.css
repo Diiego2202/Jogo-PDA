@@ -148,27 +148,34 @@ img {
     cursor: pointer;
 }
 
-
-.checkbox {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-}
-  
-  
+    /* 16px = 1 rem */
   
   /* Create a custom checkbox */
-  .checkmark {
-    position: absolute;
-    border:20rem dotted #8b0000;
-    display:block;
-    background:#fff;
-  }
- 
+.checkbox {
+    margin: 0;
+    width: 0;
+    padding: 0;
+}
+
+.icone {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    vertical-align: top;
+    margin-top: 0.2rem;
+    margin-right: 0.2rem;
+    border: 2px solid #000;
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+
+.icone > img {
+    width: 0.75rem;
+    height: 0rem;
+    vertical-align: top;
+    transition:  ease-in-out 0.3s;
+}
+
+.chechbox:checked + .icone > img {
+    height: 0.75rem;
+}
