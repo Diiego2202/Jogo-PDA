@@ -147,3 +147,28 @@ img {
     font-weight: 500;
     cursor: pointer;
 }
+
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+  
+  
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    border:20rem dotted #8b0000;
+    display:block;
+    background:#fff;
+  }
+ 
