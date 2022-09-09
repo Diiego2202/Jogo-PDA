@@ -46,16 +46,17 @@ function renderTela() {
 
 	const tela = competencias[competenciaAtual][telaAtual];
 
-	let html = `
-		// @@@
-		html inicial padrão com a imagem e,
-		eventualmente, botões anterior/próxima
-	`;
+	let html = `<div class="corpo">`;
 
 	if (tela.titulo) {
 		// @@@ criar HTML para o título
 		html += `<p>${encode(competencias[competenciaAtual][telaAtual].titulo)}</p>`;
 	}
+
+	if (tela.urlImagem) {
+		html += `<p class="img_tela"><img src="${encode(competencias[competenciaAtual][telaAtual].urlImagem)}"/></p>`;
+	}
+	
 
 	if (tela.descricao) {
 		// @@@ criar HTML para a descrição
@@ -72,12 +73,15 @@ function renderTela() {
 	}
 
 	if(tela != competencias[0][0]) { 
+
 		html += `<p><button class="btn-opcao" onclick="irParaAnterior()">Anterior</button></p>`;
 	} 
 	
 	if (tela != competencias[competencias.length - 1][competencias[competenciaAtual].length - 1]) {
 		html += `<p><button class="btn-opcao" onclick="irParaProxima()">Próxima</button></p>`;
 	}
+	
+	html += `</div>`;
 
 	main.innerHTML = html;
 

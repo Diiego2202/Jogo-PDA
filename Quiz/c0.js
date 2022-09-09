@@ -3,36 +3,10 @@
 // Cada competência é um array de telas
 
 competencias[0] = [
+
 	{ // tela 0
-		urlImagem: "...",
-		titulo: "AUTONOMIA",
-		descricao: "Fase 1"
-	},
-
-	{ // tela 1
-		urlImagem: "...",
-		descricao: "descricao 1"
-	},
-
-	{ // tela 2 - essa questão está muito esquisito...
-		urlImagem: "...",
-		titulo: "Titulo2",
-		descricao: "Descricao2",
-		alternativas: [
-			{
-				descricao: "2: alt1",
-				valor: 0 // Rubrica? Métrica de avaliação?...?
-			},
-			{
-				descricao: "2:alt2",
-				valor: 0 // Rubrica? Métrica de avaliação?...?
-			}
-		]
-	},
-
-	{ // tela 3
-		urlImagem : "...",
-		título: "DESAFIO 2: [Combinar Teorias]",
+		urlImagem : "img/nave.jpeg",
+		titulo: "DESAFIO 2: [Combinar Teorias]",
 		descricao: "desc3",
 		alternativas: [
 			{
@@ -81,6 +55,34 @@ competencias[0] = [
 			}
 		]
 	}, 
+
+	{ // tela 1
+		urlImagem: "...",
+		titulo: "AUTONOMIA",
+		descricao: "Fase 1"
+	},
+
+	{ // tela 2
+		urlImagem: "...",
+		descricao: "descricao 1"
+	},
+
+	{ // tela 3 - essa questão está muito esquisito...
+		urlImagem: "...",
+		titulo: "Titulo2",
+		descricao: "Descricao2",
+		alternativas: [
+			{
+				descricao: "2: alt1",
+				valor: 0 // Rubrica? Métrica de avaliação?...?
+			},
+			{
+				descricao: "2:alt2",
+				valor: 0 // Rubrica? Métrica de avaliação?...?
+			}
+		]
+	},
+
 	
 	// ...
 ];
