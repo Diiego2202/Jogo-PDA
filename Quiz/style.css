@@ -97,7 +97,7 @@ img {
 }
 
 .regras {
-    width: 540px;
+    width: 33.75rem;
     background-color: #ffffff;
     border-radius: 0.3125rem;
 }
@@ -159,13 +159,13 @@ img {
 
 .icone {
     display: inline-block;
-    width: 0.75rem;
+    max-width: 0.75rem;
     height: 0.75rem;
     vertical-align: top;
     margin-top: 0.2rem;
     margin-right: 0.2rem;
-    border: 0.0625rem solid #000;
-    border-radius: 0.24rem;
+    border: 0.0635rem solid #000;
+    border-radius: 0.14rem;
     overflow: hidden;
 }
 
