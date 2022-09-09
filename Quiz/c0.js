@@ -31,8 +31,8 @@ competencias[0] = [
 	},
 
 	{ // tela 3
-		urlImagem : "...",
-		título: "DESAFIO 2: [Combinar Teorias]",
+		urlImagem : "img/nave.jpeg",
+		titulo: "DESAFIO 2: [Combinar Teorias]",
 		descricao: "desc3",
 		alternativas: [
 			{
