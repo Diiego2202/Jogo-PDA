@@ -215,3 +215,12 @@ img {
     font-weight: 500;
     cursor: pointer;
 }
+
+.btn-botao {
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2.1875rem;
+    border-top: 0.0625rem solid #959595;
+}

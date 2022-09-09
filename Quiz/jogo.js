@@ -74,11 +74,11 @@ function renderTela() {
 
 	if(tela != competencias[0][0]) { 
 
-		html += `<p><button class="btn-opcao" onclick="irParaAnterior()">Anterior</button></p>`;
+		html += `<p class="btn-botao"><button class="btn-opcao" onclick="irParaAnterior()">Anterior</button></p>`;
 	} 
 	
 	if (tela != competencias[competencias.length - 1][competencias[competenciaAtual].length - 1]) {
-		html += `<p><button class="btn-opcao" onclick="irParaProxima()">Próxima</button></p>`;
+		html += `<p class="btn-botao"><button class="btn-opcao" onclick="irParaProxima()">Próxima</button></p>`;
 	}
 	
 	html += `</div>`;
