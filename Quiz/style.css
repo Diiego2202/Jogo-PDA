@@ -41,8 +41,8 @@ body {
     z-index: 10000;
     left: 0;
     top: 0;
-    width: 4px;
-    height: 4px;
+    width: 0.25rem;
+    height: 0.25rem;
     -webkit-transform-origin: left top;
     -moz-transform-origin: left top;
     transform-origin: left top;
@@ -85,13 +85,13 @@ img {
 }
 
 .botao_inicio button {
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-weight: 500;
     color: #000000;
-    padding: 15px 30px;
+    padding: 0.9375rem 1.875rem;
     outline: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     background: #ffffff;
     cursor: pointer;
 }
@@ -99,27 +99,27 @@ img {
 .regras {
     width: 540px;
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 
 .regras .regras_titulo {
-    height: 60px;
+    height: 3.75rem;
     width: 100%;
-    border-bottom: 1px solid #959595;
+    border-bottom: 0.0625rem solid #959595;
     display: flex;
     align-items: center;
-    padding: 0 35px;
-    font-size: 20px;
+    padding: 0 2.1875rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
 .regras .regras_lista {
-    padding: 15px 35px;
+    padding: 0.9375rem 2.1875rem;
 }
 
 .regras .regras_lista .informacao {
-    margin: 5px 0;
-    font-size: 17px;
+    margin: 0.3125rem 0;
+    font-size: 1.0625rem;
 }
 
 .regras .regras_lista .informacao span {
@@ -127,23 +127,23 @@ img {
 }
 
 .regras .seguir {
-    height: 60px;
+    height: 3.75rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 35px;
-    border-top: 1px solid #959595;
+    padding: 0 2.1875rem;
+    border-top: 0.0625rem solid #959595;
 }
 
 .regras .seguir button {
-    margin: 0 5px;
-    height: 40px;
-    width: 100px;
+    margin: 0 0.3125rem;
+    height: 2.5rem;
+    width: 6.25rem;
     border: 1px solid #8b0000;
     background: #8b0000;
-    border-radius: 5px;
+    border-radius: 0.315rem;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
 }
@@ -151,7 +151,7 @@ img {
     /* 16px = 1 rem */
   
   /* Create a custom checkbox */
-.checkbox {
+.chk {
     margin: 0;
     width: 0;
     padding: 0;
@@ -164,18 +164,18 @@ img {
     vertical-align: top;
     margin-top: 0.2rem;
     margin-right: 0.2rem;
-    border: 2px solid #000;
-    border-radius: 0.3rem;
+    border: 0.0625rem solid #000;
+    border-radius: 0.24rem;
     overflow: hidden;
 }
 
 .icone > img {
     width: 0.75rem;
-    height: 0rem;
+    opacity: 0;
     vertical-align: top;
-    transition:  ease-in-out 0.3s;
+    transition: ease-in-out 0.3s;
 }
 
-.chechbox:checked + .icone > img {
-    height: 0.75rem;
+.chk:checked + .icone > img {
+    opacity: 1;
 }
