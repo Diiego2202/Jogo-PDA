@@ -216,17 +216,8 @@ img {
     cursor: pointer;
 }
 
-.btn-botao1 {
-    height: 3.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 2.1875rem;
-    border-top: 0.0625rem solid #959595;
-}
-
-.btn-botao2 {
-    height: 3.75rem;
+.btn-botao {
+    height: 2.75rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
