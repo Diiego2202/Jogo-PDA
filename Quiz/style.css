@@ -151,15 +151,23 @@ img {
     /* 16px = 1 rem */
   
   /* Create a custom checkbox */
+.chk-verde {
+    position: relative;
+}
+
 .chk {
     margin: 0;
     width: 0;
     padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .icone {
     display: inline-block;
-    max-width: 0.75rem;
+    position: relative;
+    width: 0.75rem;
     height: 0.75rem;
     vertical-align: top;
     margin-top: 0.2rem;
@@ -170,9 +178,12 @@ img {
 }
 
 .icone > img {
-    width: 0.75rem;
+    position: absolute;
+    width: 0.675rem;
+    height: 0.675rem;
+    left: -0.01rem;
+    top: -0.01rem;
     opacity: 0;
-    vertical-align: top;
     transition: ease-in-out 0.3s;
 }
 
