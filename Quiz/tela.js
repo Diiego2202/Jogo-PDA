@@ -4,7 +4,7 @@
 let larguraPadrao = 1280,
 	alturaPadrao = 720,
 	// O tamanho da fonte (1em) vai ser alturaTela / 24 (se quiser mais ou menos, é só ajustar aqui)
-	linhasPorTela = 24,
+	linhasPorTela = 30,
 	// Quando tamanhoDaFonteInteiro é true, tamanhos de fonte como 12.3, 12.5, 12.95 viram 12
 	tamanhoDaFonteInteiro = false,
 	// Se ocuparTelaUltraWide for false, podem aparecer barras laterais em telas ultrawide

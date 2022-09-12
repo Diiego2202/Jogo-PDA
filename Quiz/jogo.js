@@ -50,30 +50,29 @@ function renderTela() {
 
 	if (tela.titulo) {
 		// @@@ criar HTML para o título
-		html += `<p>${encode(competencias[competenciaAtual][telaAtual].titulo)}</p>`;
+		html += `<p>${encode(tela.titulo)}</p>`;
 	}
 
 	if (tela.urlImagem) {
-		html += `<p class="img_tela"><img src="${encode(competencias[competenciaAtual][telaAtual].urlImagem)}"/></p>`;
+		html += `<p class="img_tela"><img src="${encode(tela.urlImagem)}"/></p>`;
 	}
 	
 
 	if (tela.descricao) {
 		// @@@ criar HTML para a descrição
-		html += `<p>${encode(competencias[competenciaAtual][telaAtual].descricao)}</p>`;
+		html += `<p>${encode(tela.descricao)}</p>`;
 	}
 
 	if (tela.alternativas && tela.alternativas.length) {
 		// @@@ criar HTML para as alternativas
 		for (let i = 0; i < tela.alternativas.length; i++) {
-			html += `<p><label class="chk-verde"><input type="checkbox" class="chk"><span class="icone"><img src="img/check.png" /></span>
-						${encode(competencias[competenciaAtual][telaAtual].alternativas[i].descricao)}
+			html += `<p><label class="chk-verde"><input type="checkbox" ${(tela.alternativas[i].marcada ? 'checked="checked"' : '')} class="chk"><span class="icone"><span></span></span>
+						${encode(tela.alternativas[i].descricao)}
 					</input></label></p>`;
 		}
 	}
 
 	if(tela != competencias[0][0]) { 
-
 		html += `<p class="btn-botao"><button class="btn-opcao" onclick="irParaAnterior()">Anterior</button></p>`;
 	} 
 	
