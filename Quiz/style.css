@@ -18,14 +18,14 @@ html, body, .cover {
 html, body, button, input, textarea, select, h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-weight: 700;
-    margin: 1rem 0 0;
+    margin: 0.5rem 0 0;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
     max-height: 100%;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.8em;
+    font-size: 2rem;
 }
 
 .cover {
@@ -205,8 +205,8 @@ img {
 
 .btn-opcao {
     margin: 0 0.3125rem;
-    height: 2.5rem;
-    width: 6.25rem;
+    height: 1.6rem;
+    width: 5.35rem;
     border: 1px solid #8b0000;
     background: #8b0000;
     border-radius: 0.315rem;
