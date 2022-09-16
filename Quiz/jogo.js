@@ -15,6 +15,18 @@ let encode = (function () {
 })();
 
 function irParaAnterior() {
+	const tela = competencias[competenciaAtual][telaAtual];
+    if (tela.alternativas && tela.alternativas.length) {
+        for (let i = 0; i < tela.alternativas.length; i++) {
+			let item = document.getElementsByName("itemCheck")[i]; 
+            if(item.checked) {
+                tela.alternativas[i].marcada = true;
+            } else {
+				tela.alternativas[i].marcada = false;
+			}
+        }
+    }
+	
 	if (!competenciaAtual && !telaAtual)
 		return;
 
@@ -34,7 +46,9 @@ function irParaProxima() {
 			let item = document.getElementsByName("itemCheck")[i]; 
             if(item.checked) {
                 tela.alternativas[i].marcada = true;
-            }
+            } else {
+				tela.alternativas[i].marcada = false;
+			}
         }
     }
 
