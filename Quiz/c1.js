@@ -21,11 +21,13 @@ competencias[1] = [
 		alternativas: [
 			{
 				descricao: "alt1",
-				valor: 0 // Rubrica? Métrica de avaliação?...?
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
 			},
 			{
 				descricao: "alt2",
-				valor: 0 // Rubrica? Métrica de avaliação?...?
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
 			}
 		]
 	},

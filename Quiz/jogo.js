@@ -28,6 +28,16 @@ function irParaAnterior() {
 }
 
 function irParaProxima() {
+	const tela = competencias[competenciaAtual][telaAtual];
+    if (tela.alternativas && tela.alternativas.length) {
+        for (let i = 0; i < tela.alternativas.length; i++) {
+			let item = document.getElementsByName("itemCheck")[i]; 
+            if(item.checked) {
+                tela.alternativas[i].marcada = true;
+            }
+        }
+    }
+
 	if (competenciaAtual >= (competencias.length - 1) && telaAtual >= (competencias[competenciaAtual].length - 1))
 		return;
 
@@ -36,7 +46,6 @@ function irParaProxima() {
 		competenciaAtual++;
 		telaAtual = 0;
 	}
-	
 	renderTela();
 }
 
@@ -66,7 +75,7 @@ function renderTela() {
 	if (tela.alternativas && tela.alternativas.length) {
 		// @@@ criar HTML para as alternativas
 		for (let i = 0; i < tela.alternativas.length; i++) {
-			html += `<p><label class="chk-verde"><input type="checkbox" ${(tela.alternativas[i].marcada ? 'checked="checked"' : '')} class="chk"><span class="icone"><span></span></span>
+			html += `<p><label class="chk-verde"><input name="itemCheck" type="checkbox" ${(tela.alternativas[i].marcada ? 'checked="checked"' : '')} class="chk"><span class="icone"><span></span></span>
 						${encode(tela.alternativas[i].descricao)}
 					</input></label></p>`;
 		}

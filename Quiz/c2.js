@@ -19,11 +19,13 @@ competencias[2] = [
 		alternativas: [
 			{
 				descricao: "...",
-				valor: 0 // Rubrica? Métrica de avaliação?...?
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
 			},
 			{
 				descricao: "...",
-				valor: 0 // Rubrica? Métrica de avaliação?...?
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
 			}
 		]
 	},
