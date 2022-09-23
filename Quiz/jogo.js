@@ -44,7 +44,7 @@ function irParaProxima() {
 		return;
 
 	armazenarAlternativasAtuais();
-
+	
 	telaAtual++;
 	if (telaAtual > (competencias[competenciaAtual].length - 1)) {
 		competenciaAtual++;
@@ -52,6 +52,17 @@ function irParaProxima() {
 	}
 	renderTela();
 }
+
+function Finalizar() {
+	if (competenciaAtual >= (competencias.length - 1) && telaAtual >= (competencias[competenciaAtual].length - 1))
+		return;
+
+	armazenarAlternativasAtuais();
+	
+	main.innerHTML = "";
+}
+
+
 
 function renderTela() {
 	// @@@ fade in
@@ -91,6 +102,10 @@ function renderTela() {
 	
 	if (tela != competencias[competencias.length - 1][competencias[competenciaAtual].length - 1]) {
 		html += `<p class="btn-botao"><button class="btn-opcao" onclick="irParaProxima()">Próxima</button></p>`;
+	}
+
+	if (tela == competencias[competencias.length - 1][competencias[competenciaAtual].length - 1]) {
+		html += `<p class="btn-botao"><button class="btn-final" onclick="Finalizar()">Finalizar</button></p>`;
 	}
 	
 	html += `</div>`;
