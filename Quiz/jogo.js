@@ -54,7 +54,7 @@ function irParaProxima() {
 }
 
 function Finalizar() {
-	if (competenciaAtual >= (competencias.length - 1) && telaAtual >= (competencias[competenciaAtual].length - 1))
+	if (competenciaAtual < (competencias.length - 1) || telaAtual < (competencias[competenciaAtual].length - 1))
 		return;
 
 	armazenarAlternativasAtuais();
