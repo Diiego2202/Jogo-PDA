@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html, body, .cover {
+    background: #8b0000; /* Safari for iOS and Opera for Android in fullscreen mode?!?! */
+}
+
+html, body, button, input, textarea, select, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 0.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+.cover {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 0.25rem;
+    height: 0.25rem;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    transform-origin: left top;
+}
+
+#main {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #fff;
+    overflow: auto;
+}
+
+.cover, .fade {
+    opacity: 0;
+    -webkit-transition: opacity ease-in-out 0.5s;
+    -o-transition: opacity ease-in-out 0.5s;
+    transition: opacity ease-in-out 0.5s;
+}
+
+img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+}
+
+.img_tela {
+    align-items: center;
+    max-width: 100%;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.fade:not(.visible) {
+    pointer-events: none;
+}
+
+.botao_inicio, .regras {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.botao_inicio button {
+    font-size: 1.5625rem;
+    font-weight: 500;
+    color: #000000;
+    padding: 0.9375rem 1.875rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3125rem;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.regras {
+    width: 33.75rem;
+    background-color: #ffffff;
+    border-radius: 0.3125rem;
+}
+
+.regras .regras_titulo {
+    height: 3.75rem;
+    width: 100%;
+    border-bottom: 0.0625rem solid #959595;
+    display: flex;
+    align-items: center;
+    padding: 0 2.1875rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.regras .regras_lista {
+    padding: 0.9375rem 2.1875rem;
+}
+
+.regras .regras_lista .informacao {
+    margin: 0.3125rem 0;
+    font-size: 1.0625rem;
+}
+
+.regras .regras_lista .informacao span {
+    font-weight: 600;
+}
+
+.regras .seguir {
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2.1875rem;
+    border-top: 0.0625rem solid #959595;
+}
+
+.regras .seguir button {
+    margin: 0 0.3125rem;
+    height: 2.5rem;
+    width: 6.25rem;
+    border: 1px solid #8b0000;
+    background: #8b0000;
+    border-radius: 0.315rem;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+    /* 16px = 1 rem */
+  
+  /* Create a custom checkbox */
+.chk-verde {
+    position: relative;
+}
+
+.chk {
+    margin: 0;
+    width: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.icone {
+    display: inline-block;
+    position: relative;
+    width: 0.75rem;
+    height: 0.75rem;
+    vertical-align: top;
+    margin-top: 0.1rem;
+    margin-right: 0.1rem;
+    border: 0.0635rem solid #000;
+    border-radius: 0.14rem;
+    overflow: hidden;
+    background-color: #fff;
+    transition: background-color ease-in-out 0.3s;
+}
+
+.icone > span {
+    position: absolute;
+    background-image: url(/public/img/check.png);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    left: 0rem;
+    top: 0rem;
+    z-index: -1;
+}
+
+.chk:checked + .icone {
+    background-color: transparent;
+}
+
+.corpo {
+    margin: 0 5rem;
+}
+
+.btn-opcao {
+    margin: 0 0.3125rem;
+    height: 1.6rem;
+    width: 5.35rem;
+    border: 0.0625rem solid #8b0000;
+    background: #8b0000;
+    border-radius: 0.315rem;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-botao {
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2.1875rem;
+}
+
+.btn-final {
+    margin: 0 0.3125rem;
+    height: 1.6rem;
+    width: 5.35rem;
+    border: 0.0625rem solid #000000;
+    background: #000000;
+    border-radius: 0.315rem;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
