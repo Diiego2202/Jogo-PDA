@@ -53,20 +53,43 @@ function irParaProxima() {
 	renderTela();
 }
 
+function verificarAlternativas() {
+	for(let i = 0; i < competencias.length; i++) {
+		for(let j = 0; j < competencias[i].length; j++) {
+			let l = 0;
+			if (competencias[i][j].alternativas && competencias[i][j].alternativas.length) {
+				for (let k = 0; k < competencias[i][j].alternativas.length; k++) {
+					if(!competencias[i][j].alternativas[k].marcada) {
+						l++;
+					}
+				}
+				if (l == competencias[i][j].alternativas.length) {
+					return true
+				}
+			}
+		}
+	}
+	return false
+}
+
+
 function Finalizar() {
 	if (competenciaAtual < (competencias.length - 1) || telaAtual < (competencias[competenciaAtual].length - 1))
 		return;
 
 	armazenarAlternativasAtuais();
+
+	let branca = verificarAlternativas();
 	
-	main.innerHTML = "";
+	if(branca) {
+		alert("Alerta!");
+	} else {
+		main.innerHTML = "";
+	}
 }
-
-
 
 function renderTela() {
 	// @@@ fade in
-
 
 	const tela = competencias[competenciaAtual][telaAtual];
 
