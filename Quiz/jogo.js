@@ -82,7 +82,11 @@ function Finalizar() {
 	let branca = verificarAlternativas();
 	
 	if(branca) {
-		alert("Alerta!");
+		Swal.fire({
+			icon: 'error',
+			title: 'Opa',
+			text: 'Você deixou alguma alternativa em branco'
+		  })
 	} else {
 		main.innerHTML = "";
 	}
