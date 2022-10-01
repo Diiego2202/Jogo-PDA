@@ -44,13 +44,23 @@ function irParaProxima() {
 		return;
 
 	armazenarAlternativasAtuais();
+
+	let questaoAtualEmBranco = alternativasEstaoEmBrancoAtual();
 	
-	telaAtual++;
-	if (telaAtual > (competencias[competenciaAtual].length - 1)) {
-		competenciaAtual++;
-		telaAtual = 0;
+	if(questaoAtualEmBranco) {
+		Swal.fire({
+			icon: 'error',
+			title: 'Opa',
+			text: 'Você deixou a questão em branco'
+		  })
+	} else {
+		telaAtual++;
+		if (telaAtual > (competencias[competenciaAtual].length - 1)) {
+			competenciaAtual++;
+			telaAtual = 0;
+		}
+		renderTela();;
 	}
-	renderTela();
 }
 
 function alternativasEstaoEmBranco() {
@@ -101,9 +111,9 @@ function Finalizar() {
 
 	armazenarAlternativasAtuais();
 
-	let branca = alternativasEstaoEmBranco();
+	let questoesEmBranco = alternativasEstaoEmBranco();
 	
-	if(branca) {
+	if(questoesEmBranco) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Opa',
@@ -167,8 +177,3 @@ function renderTela() {
 function iniciar() {
 	renderTela();
 }
-
-
-
-
-// restante do código...
