@@ -88,7 +88,7 @@ function Finalizar() {
 			text: 'Você deixou alguma alternativa em branco'
 		  })
 	} else {
-		main.innerHTML = "";
+		main.innerHTML = "<p>Concluide!</p>";
 	}
 }
 
