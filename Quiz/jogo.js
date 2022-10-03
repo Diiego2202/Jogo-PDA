@@ -44,34 +44,66 @@ function irParaProxima() {
 		return;
 
 	armazenarAlternativasAtuais();
+
+	let questaoAtualEmBranco = alternativasEstaoEmBrancoAtual();
 	
-	telaAtual++;
-	if (telaAtual > (competencias[competenciaAtual].length - 1)) {
-		competenciaAtual++;
-		telaAtual = 0;
+	if(questaoAtualEmBranco) {
+		Swal.fire({
+			icon: 'error',
+			title: 'Opa',
+			text: 'Você deixou a questão em branco'
+		  })
+	} else {
+		telaAtual++;
+		if (telaAtual > (competencias[competenciaAtual].length - 1)) {
+			competenciaAtual++;
+			telaAtual = 0;
+		}
+		renderTela();;
 	}
-	renderTela();
 }
 
-function verificarAlternativas() {
+function alternativasEstaoEmBranco() {
 	for(let i = 0; i < competencias.length; i++) {
-		for(let j = 0; j < competencias[i].length; j++) {
-			let l = 0;
-			if (competencias[i][j].alternativas && competencias[i][j].alternativas.length) {
-				for (let k = 0; k < competencias[i][j].alternativas.length; k++) {
-					if(!competencias[i][j].alternativas[k].marcada) {
-						l++;
+		let competencia = competencias[i];
+		for(let j = 0; j < competencia.length; j++) {
+			let tela = competencia[j];
+			let alternativas = tela.alternativas;
+			if (alternativas && alternativas.length) {
+				let temPreenchido = false;
+				for (let k = 0; k < alternativas.length; k++) {
+					if (alternativas[k].marcada) {
+						temPreenchido = true;
+						break;
 					}
 				}
-				if (l == competencias[i][j].alternativas.length) {
-					return true
+				if (!temPreenchido) {
+					return true;
 				}
 			}
 		}
 	}
-	return false
+	return false;
 }
 
+function alternativasEstaoEmBrancoAtual() {
+	let competencia = competencias[competenciaAtual];
+	let tela = competencia[telaAtual];
+	let alternativas = tela.alternativas;
+	if (alternativas && alternativas.length) {
+		let temPreenchido = false;
+		for (let k = 0; k < alternativas.length; k++) {
+			if (alternativas[k].marcada) {
+				temPreenchido = true;
+				break;
+			}
+		}
+		if (!temPreenchido) {
+			return true;
+		}
+	}
+	return false;
+}
 
 function Finalizar() {
 	if (competenciaAtual < (competencias.length - 1) || telaAtual < (competencias[competenciaAtual].length - 1))
@@ -79,9 +111,9 @@ function Finalizar() {
 
 	armazenarAlternativasAtuais();
 
-	let branca = verificarAlternativas();
+	let questoesEmBranco = alternativasEstaoEmBranco();
 	
-	if(branca) {
+	if(questoesEmBranco) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Opa',
@@ -145,8 +177,3 @@ function renderTela() {
 function iniciar() {
 	renderTela();
 }
-
-
-
-
-// restante do código...
