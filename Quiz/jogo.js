@@ -151,7 +151,7 @@ function renderTela() {
 
 	if (tela.descricao) {
 		// @@@ criar HTML para a descrição
-		html += `<p class="corpo_descricao">${encode(tela.descricao)}</p>`;
+		html += `<p class="corpo_descricao">${tela.descricao}</p>`;
 	}
 
 	if (tela.alternativas && tela.alternativas.length) {
