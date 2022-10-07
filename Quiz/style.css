@@ -132,14 +132,26 @@ img {
     
 }
 
+.regras .regras_titulo_fim {
+    height: 3.75rem;
+    width: 100%;
+    border-bottom: 0.0625rem solid #959595;
+    text-align: center;
+    padding: 0 2.1875rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    
+}
+
 
 .regras .regras_lista {
     padding: 0.9375rem 2.1875rem;
 }
 
 .regras .regras_lista_fim {
+    
     padding: 0.9375rem 2.1875rem;
-    border-bottom: 0.0725rem solid #959595;
+    border-bottom: 0.0625rem solid #959595;
     text-align: center;
 }
 
