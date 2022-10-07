@@ -121,7 +121,7 @@ function Finalizar() {
 		  })
 	} else {
 		main.innerHTML = `<div class="regras">
-		<div class="regras_titulo">
+		<div class="regras_titulo_fim">
 			<span>Parabéns pela conclusão 🥳</span>
 		</div>
 		<div class="regras_lista_fim">
@@ -151,7 +151,7 @@ function renderTela() {
 
 	if (tela.descricao) {
 		// @@@ criar HTML para a descrição
-		html += `<p class="corpo_descricao">${tela.descricao}</p>`;
+		html += `<div class="corpo_descricao">${tela.descricao}</div>`;
 	}
 
 	if (tela.alternativas && tela.alternativas.length) {
