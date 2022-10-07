@@ -5,12 +5,13 @@
 competencias[1] = [
 	{ // tela 0
 		urlImagem: "...",
-		titulo: "C1",
+		titulo: "...",
 		descricao: "descricaoC1-0"
 	},
 
 	{ // tela 1
 		urlImagem: "...",
+		titulo: "...",
 		descricao: "descricaoC1-1"
 	},
 

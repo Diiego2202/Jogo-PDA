@@ -120,7 +120,15 @@ function Finalizar() {
 			text: 'Você deixou alguma alternativa em branco'
 		  })
 	} else {
-		main.innerHTML = "<p>Concluide!</p>";
+		main.innerHTML = `<div class="regras">
+		<div class="regras_titulo">
+			<span>Parabéns pela conclusão 🥳</span>
+		</div>
+		<div class="regras_lista_fim">
+			<div class="informacao">Seu resultado:</div>
+			<div></div>
+		</div>
+	</div>`;
 	}
 }
 
@@ -133,7 +141,7 @@ function renderTela() {
 
 	if (tela.titulo) {
 		// @@@ criar HTML para o título
-		html += `<p>${encode(tela.titulo)}</p>`;
+		html += `<p class="corpo_titulo">${encode(tela.titulo)}</p>`;
 	}
 
 	if (tela.urlImagem) {
@@ -143,7 +151,7 @@ function renderTela() {
 
 	if (tela.descricao) {
 		// @@@ criar HTML para a descrição
-		html += `<p>${encode(tela.descricao)}</p>`;
+		html += `<p class="corpo_descricao">${encode(tela.descricao)}</p>`;
 	}
 
 	if (tela.alternativas && tela.alternativas.length) {

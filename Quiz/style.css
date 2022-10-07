@@ -67,13 +67,25 @@ body {
 
 img {
     display: inline-block;
-    vertical-align: top;
-    max-width: 100%;
+    vertical-align: center;
+    max-width: 65%;
+}
+
+.corpo_titulo {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+.corpo_descricao {
+    font-size: 1rem;
+    margin: 2rem 0;
+    line-height: 1.6rem;
 }
 
 .img_tela {
-    align-items: center;
     max-width: 100%;
+    text-align: center;
 }
 
 .visible {
@@ -88,7 +100,7 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);   
 }
 
 .botao_inicio button {
@@ -107,6 +119,7 @@ img {
     width: 33.75rem;
     background-color: #ffffff;
     border-radius: 0.3125rem;
+    
 }
 
 .regras .regras_titulo {
@@ -118,10 +131,17 @@ img {
     padding: 0 2.1875rem;
     font-size: 1.25rem;
     font-weight: 600;
+    
 }
 
 .regras .regras_lista {
     padding: 0.9375rem 2.1875rem;
+}
+
+.regras .regras_lista_fim {
+    padding: 0.9375rem 2.1875rem;
+    border-bottom: 0.0725rem solid #959595;
+    text-align: center;
 }
 
 .regras .regras_lista .informacao {
@@ -129,8 +149,10 @@ img {
     font-size: 1.0625rem;
 }
 
+
 .regras .regras_lista .informacao span {
     font-weight: 600;
+    text-align: center;
 }
 
 .regras .seguir {
