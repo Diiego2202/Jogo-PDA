@@ -4,7 +4,7 @@
 
 competencias[0] = [
 
-	{ // tela 0
+	{ // tela "2"
 		urlImagem : "/public/img/nave.jpeg",
 		titulo: "DESAFIO 2: [Combinar Teorias]",
 		descricao: `
@@ -77,10 +77,160 @@ competencias[0] = [
 		]
 	}, 
 
-	{ // tela 1
+	{ // tela "3" - essa questão está muito esquisito...
+		urlImagem: "/public/img/nave.jpeg",
+		titulo: "DESAFIO 3: [Utilizar conhecimentos prévios]",
+		descricao: `
+			<p> 
+				A Dra. Emma explica: 
+			</p>
+			<p>
+				DRA. EMMA SCHULTZ: “Após muitos estudos obtivemos diversos conhecimentos básicos acerca do planeta. Observando as aves já conhecidas em T0I700d, concluimos que as aves possuem penas em quase todo o corpo, mas no topo de sua cabeça há alguns pelos, devido aos ventos fortes em grandes altitudes do plena as aves só voam em uma altura de no máximo 300 metros. Outro conhecimento é que os animais que voam se alimentam majoritariamente de frutas cítricas. Observando o habitat dos animais, observou-se também que a maioria dos predadores das aves vivem em regiões de pântano.”
+			</p>
+			<p>
+				QUESTÃO- Supondo que você encontre uma suposta espécie totalmente nova de pássaro, distinta das demais, o que podemos afirmar sobre os conhecimentos acerca dela? 
+			</p>
+		`,
+		alternativas: [
+			{
+				descricao: "Devemos descartar quaisquer conhecimentos prévios, uma vez que se trata de uma espécie nova.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Ao ver a nova ave podemos observá-la para confirmar se há penas pelo corpo e pelos no topo da cabeça.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " É impossível afirmar que já há algum conhecimento que possa contribuir para o assunto.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Para utilizar os conhecimentos prévios acerca de aves sobre o novo pássaro em questão é preciso do auxílio de um especialista.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Apesar de haver conhecimentos prévios sobre a questão, não é possível utilizá-los para construir uma nova teoria, visto que esses conhecimentos são antigos. Deve-se então criar novas teorias completamente do zero.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Dado os conhecimentos prévios sobre aves podemos inferir e construir hipóteses sobre onde essa nova espécie pode habitar e sobre qual tipo de alimentação que ela leva.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " A descoberta trata de um objeto inteiramente novo, ou seja, não se sabe absolutamente nada sobre ela.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: "Dado os conhecimentos prévios que temos sobre as aves podemos supor que elas não voam acima dos 300 metros, ainda que isso precise ser testado e comprovado.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Apenas é possível se formular teorias sobre a nova ave caso um observador de aves constate auxilie na observação das características da mesma.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Sabemos alguns fatores relacionadas ao assunto, porém esses conhecimentos não possuem serventia para a nova descoberta.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Para entendermos quais conhecimentos prévios existem sobre a espécie é preciso da orientação de um cientista que saiba mais sobre o assunto.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Cada descoberta nova resulta em um campo completamente desconhecido, sobre o qual nada se sabe, apenas há novas coisas para serem pesquisadas e estudadas.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			}
+		]
+	},
+
+	{ // tela "4" - essa questão está muito esquisito...
 		urlImagem: "...",
-		titulo: "AUTONOMIA",
-		descricao: "Fase 1"
+		titulo: "DESAFIO 5: [Combinar Ideias]",
+		descricao: `
+		<p>
+			[Balão de Texto] – Você é enviado para uma nova área do planeta, a Biomind. Na Biomind buscamos ideias criativas para que a transição para o habitat de T0I700d seja feita de maneira natural e sustentável, de forma a construir uma mentalidade para a qual essa adaptação seja moldada. Há muito o que ser discutido e debatido sobre uma forma harmônica de se habitar esse novo local, de uma maneira que seja boa tanto para a comunidade futura quanto para o meio ambiente do planeta em si. Em seguida o doutor Leonel Carosello, vai explicar um pouco mais e pedir sugestões ou opiniões sobre determinados assuntos.
+		</p>
+		<p>
+			DR. LEONEL CAROSELLO:
+		</p>
+		<p>
+			QUESTÃO- Há muitos desafios envolvendo a habitação de um novo planeta. Primeiro precisamos controlar o impacto ambiental de modo que nossa presença não afete negativamente o planeta, também precisamos promover uma habitação segura para os seres humanos. Outros desafios também surgem com isso, como por exemplo, a criação de uma organização de sociedade e de regras para a convivência entre as pessoas e a natureza. Diante de tantos desafios, buscamos sugestões daqueles que mais serão impactados por essas decisões: vocês, futuros visitantes ou habitantes de T0I700d. Em sua opinião como devem ser os planos realizados para essa difícil tarefa?
+		</p>
+		`,
+		alternativas: [
+			{
+				descricao: " Os desafios encontrados são muito diversos entre si. Seria impossível resolvê-los de forma conjunta, é preciso tratar cada assunto como uma coisa única sem misturar os planos e ideias. Somente fazendo essa divisão e atacando cada problema por vez é possível chegar a uma solução.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Para contornar esses desafios é necessária a criação de um plano que não só combine diferentes ideias sobre os problemas já conhecidos, mas que também antecipe outros futuros obstáculos a serem encontrados na ocupação do planeta.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Deveria haver uma espécie de guia de possibilidades futuras para que eu e o restante da comunidade pudéssemos desenvolver ideias.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Podemos combinar diferentes ideias a fim de obter soluções que abranjam mais de um problema. ",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Há problemas que são inerentes ao desenvolvimento de uma sociedade e se faz necessário escolher prioridades. É impossível promover o desenvolvimento sem causar grandes impactos, portanto deve-se estabelecer qual problema é prioritário a fim de estabelecer um plano.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " A sugestão de planos, táticas ou soluções propostas pelos habitantes deveriam partir única e exclusivamente de problemas orientados por cientistas ou pessoas mais entendidas do assunto.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Precisamos buscar, de maneira interconectada, ideias que contornem esses problemas. Por exemplo, meios de desenvolver a civilização no local ao mesmo tempo em que se preserve o meio ambiente. Essas ideias podem ainda se conectar com outros assuntos, como por exemplo a forma com que a arquitetura local será construída, ou até mesmo, com o modo com que se dá a exploração de novas áreas.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " É possível por exemplo, tentar buscar a combinação entre ideias que gerem a sustentabilidade da natureza do planeta e também ideias que busquem promover a habitação local. Como, por exemplo, construir casas que não agridam o meio ambiente e usem energias limpas como a solar.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Não há cabimento para que a comunidade do planeta dê sugestões para esses tipos de problemas, uma vez que ela é incapaz de ter e combinar ideias sem que haja o auxílio de profissionais.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " É necessário para que haja uma solução não somente combinação de diferentes ideias de diferentes áreas, mas também a constante busca por novas perspectivas e planos para contornar futuros problemas.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " Não é possível propor ideias ou planos no momento. Os problemas vão surgindo na hora, conforme as coisas vão acontecendo, de maneira que as decisões devem ser tomadas de maneira situacional.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: " O projeto ideal precisa combinar diferentes ideias para atingir o resultado final. Em vez de se combater individualmente cada problema, podemos combinar planos para diferentes questões e uni-los a fim de criar soluções.",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			}
+		]
 	},
 
 	{ // tela 2
