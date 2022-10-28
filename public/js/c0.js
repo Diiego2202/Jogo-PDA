@@ -78,10 +78,10 @@ competencias[0] = [
 	}, 
 
 	{ // tela "3" - essa questão está muito esquisito...
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem : "/public/img/nave.jpeg",
 		titulo: "DESAFIO 3: [Utilizar conhecimentos prévios]",
 		descricao: `
-			<p> 
+			<p>
 				A Dra. Emma explica: 
 			</p>
 			<p>
@@ -93,70 +93,65 @@ competencias[0] = [
 		`,
 		alternativas: [
 			{
-				descricao: "Devemos descartar quaisquer conhecimentos prévios, uma vez que se trata de uma espécie nova.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " É correto afirmar que a teoria da evolução agiu para que o ser fosse selecionado de tal forma. Desse modo, ela é a única teoria válida para a explicação sobre a existência desse ser.",
+				valor: 0,
 				marcada: false,
 			},
 			{
-				descricao: " Ao ver a nova ave podemos observá-la para confirmar se há penas pelo corpo e pelos no topo da cabeça.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " A teoria da evolução e a teoria do Agnentânio são duas teorias distintas, mas que podem ser combinadas para explicar diversos aspectos acerca da natureza do planeta. Assim como é possível fazer com teorias interdisciplinares.",
+				valor: 0,
 				marcada: false,
 			},
 			{
-				descricao: " É impossível afirmar que já há algum conhecimento que possa contribuir para o assunto.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " É possível que a teoria sobre o Agnentânio seja aplicável a esse caso, mesmo que em conjunto com a teoria da evolução.",
+				valor: 0,
 				marcada: false,
 			},
 			{
-				descricao: " Para utilizar os conhecimentos prévios acerca de aves sobre o novo pássaro em questão é preciso do auxílio de um especialista.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " É possível tentar utilizadar ambas as teorias para se buscar por explicações para diversos fenônemos do planeta, desde como são os animais até a como é disposta a vegetação. Uma vez que as teorias são interdisciplinares e combináveis.",
+				valor: 0,
 				marcada: false,
 			},
 			{
-				descricao: " Apesar de haver conhecimentos prévios sobre a questão, não é possível utilizá-los para construir uma nova teoria, visto que esses conhecimentos são antigos. Deve-se então criar novas teorias completamente do zero.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " É estritamente necessário estudar bem o fenômeno para enquadrá-lo em apenas uma das teorias existentes, visto que o fato de que ele se encaixa em uma teoria, anula a possibilidade dele se encaixar na outra.",
+				valor: 0,
 				marcada: false,
 			},
 			{
-				descricao: " Dado os conhecimentos prévios sobre aves podemos inferir e construir hipóteses sobre onde essa nova espécie pode habitar e sobre qual tipo de alimentação que ela leva.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " É possível que a teoria da evolução explique alguns aspectos sobre o animal, enquanto a teoria sobre o Agnentânio explique outro, de modo que combinando as duas pode ser que se chegue a uma explicação sobre o porquê do animal ser desse jeito.",
+				valor: 0,
 				marcada: false,
 			},
 			{
-				descricao: " A descoberta trata de um objeto inteiramente novo, ou seja, não se sabe absolutamente nada sobre ela.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " As duas teorias podem coexistir, no entanto combiná-las para explicar tal fenômeno é impossível.",
+				valor: 0,
 				marcada: false,
 			},
 			{
-				descricao: "Dado os conhecimentos prévios que temos sobre as aves podemos supor que elas não voam acima dos 300 metros, ainda que isso precise ser testado e comprovado.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " É possível que o fato do animal possuir um tamanho grande comparando com o porquinho da Índia terrestre se deva a uma combinação de tanto a evolução quanto o Agnentânio.",
+				valor: 0,
 				marcada: false,
 			},
 			{
-				descricao: " Apenas é possível se formular teorias sobre a nova ave caso um observador de aves constate auxilie na observação das características da mesma.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " A evolução foi uma realidade para as espécies, assim como a existência do Agnentânio no solo local. Desse modo, as pesquisas não só sobre o porquinho, mas também sobre diferentes espécies locais podem utilizar e testar ambas as teorias, sem que uma exclua a outra. ",
+				valor: 0,
 				marcada: false,
 			},
 			{
-				descricao: " Sabemos alguns fatores relacionadas ao assunto, porém esses conhecimentos não possuem serventia para a nova descoberta.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " Os acontecimentos anteriores não possuem relação alguma com o atual, visto que cada caso é um caso diferente, não podendo se aplicar em outras situações.",
+				valor: 0,
 				marcada: false,
-			},
+			}, 
 			{
-				descricao: " Para entendermos quais conhecimentos prévios existem sobre a espécie é preciso da orientação de um cientista que saiba mais sobre o assunto.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
-				marcada: false,
-			},
-			{
-				descricao: " Cada descoberta nova resulta em um campo completamente desconhecido, sobre o qual nada se sabe, apenas há novas coisas para serem pesquisadas e estudadas.",
-				valor: 0, // Rubrica? Métrica de avaliação?...?
+				descricao: " Embora ambas as teorias tenham embasamento e possam afetar campos científicos em comum, elas agem de forma distinta, de modo que tentar combiná-las seria um erro.",
+				valor: 0,
 				marcada: false,
 			}
 		]
 	},
 
 	{ // tela "4" - essa questão está muito esquisito...
-		urlImagem: "...",
+		urlImagem: "/public/img/nave.jpeg",
 		titulo: "DESAFIO 5: [Combinar Ideias]",
 		descricao: `
 		<p>
