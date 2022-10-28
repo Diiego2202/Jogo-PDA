@@ -112,7 +112,7 @@ function Finalizar() {
 	armazenarAlternativasAtuais();
 
 	let questoesEmBranco = alternativasEstaoEmBranco();
-	
+
 	if(questoesEmBranco) {
 		Swal.fire({
 			icon: 'error',
@@ -130,6 +130,31 @@ function Finalizar() {
 		</div>
 	</div>`;
 	}
+
+	// testes insert
+	let opcoes = {
+		method = "POST",
+		body: new FormData(form)
+	}
+
+	try {
+		let response = await fetch("/cadastrarResposta", opcoes);
+
+		if (response.ok) {
+			// Limpa os campos para facilitar a criação da próxima pessoa.
+			form.reset();
+			// Limpa os erros e sucessos.
+			$(form).validate().resetForm();
+
+			Swal.fire("Sucesso!", "Pergunta cadastrada", "success");
+		} else {
+			Swal.fire("Erro!", "Ocorreu um erro na finalização", "error");
+		}
+	} catch (ex) {
+		Swal.fire("Erro!", "Erro de rede: " + ex.message, "error");
+	}
+	//
+
 }
 
 function renderTela() {
