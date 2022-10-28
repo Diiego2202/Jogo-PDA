@@ -272,3 +272,11 @@ img {
     font-weight: 500;
     cursor: pointer;
 }
+
+.fade {
+	opacity: 0;
+	-webkit-transition: opacity ease-in-out 0.5s;
+	-moz-transition: opacity ease-in-out 0.5s;
+	-o-transition: opacity ease-in-out 0.5s;
+	transition: opacity ease-in-out 0.5s;
+}
