@@ -3,6 +3,8 @@
 let competencias = new Array(4);
 let competenciaAtual = 0;
 let telaAtual = 0;
+let fading = false;
+let enviando = false;
 
 let encode = (function () {
 	var amp = /\&/g, lt = /</g, gt = />/g, quot = /\"/g, apos = /\'/g;
@@ -24,6 +26,26 @@ function armazenarAlternativasAtuais() {
     }
 }
 
+function alternativasAtuais() {
+	let selecao = [];
+	let competencia = competencias[competenciaAtual];
+	let tela = competencia[telaAtual];
+	let alternativas = tela.alternativas;
+	if (alternativas && alternativas.length) {
+		for (let k = 0; k < alternativas.length; k++) {
+			if (alternativas[k].marcada) {
+				selecao.push({
+					competencia: competenciaAtual,
+					pergunta: telaAtual,
+					resposta: k,
+					idusuario: idusuario
+				});
+			}
+		}
+	}
+	return selecao;
+}
+
 function irParaAnterior() {
 	if (!competenciaAtual && !telaAtual)
 		return;
@@ -39,87 +61,90 @@ function irParaAnterior() {
 	renderTela();
 }
 
-function irParaProxima() {
-	if (competenciaAtual >= (competencias.length - 1) && telaAtual >= (competencias[competenciaAtual].length - 1))
+async function enviarAlternativas(selecao) {
+	try {
+		// @@@ exibir spinner
+
+		enviando = true;
+
+		const response = await fetch("/cadastrarResposta", {
+			method: "POST",
+			body: JSON.stringify(selecao),
+			headers: {
+				"Content-Type": "application/json"
+			}
+		});
+
+		if (!response.ok) {
+			Swal.fire({
+				icon: 'error',
+				title: 'Opa',
+				text: 'Ocorreu um erro de rede ao enviar as alternativas: ' + response.status
+			});
+	
+			return false;
+		}
+
+		return true;
+	} catch (ex) {
+		Swal.fire({
+			icon: 'error',
+			title: 'Opa',
+			text: 'Ocorreu um erro de rede ao enviar as alternativas: ' + ex.message
+		});
+
+		return false;
+	} finally {
+		enviando = false;
+		// @@@ ocultar spinner
+	}
+}
+
+async function irParaProxima() {
+	if (fading || enviando || competenciaAtual >= (competencias.length - 1) && telaAtual >= (competencias[competenciaAtual].length - 1))
 		return;
 
 	armazenarAlternativasAtuais();
 
-	let questaoAtualEmBranco = alternativasEstaoEmBrancoAtual();
-	
-	if(questaoAtualEmBranco) {
+	let selecao = alternativasAtuais();
+
+	if(!selecao.length) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Opa',
 			text: 'Você deixou a questão em branco'
-		  })
+		});
 	} else {
+		if (!await enviarAlternativas(selecao))
+			return;
+
 		telaAtual++;
 		if (telaAtual > (competencias[competenciaAtual].length - 1)) {
 			competenciaAtual++;
 			telaAtual = 0;
 		}
-		renderTela();;
+		renderTela();
 	}
 }
 
-function alternativasEstaoEmBranco() {
-	for(let i = 0; i < competencias.length; i++) {
-		let competencia = competencias[i];
-		for(let j = 0; j < competencia.length; j++) {
-			let tela = competencia[j];
-			let alternativas = tela.alternativas;
-			if (alternativas && alternativas.length) {
-				let temPreenchido = false;
-				for (let k = 0; k < alternativas.length; k++) {
-					if (alternativas[k].marcada) {
-						temPreenchido = true;
-						break;
-					}
-				}
-				if (!temPreenchido) {
-					return true;
-				}
-			}
-		}
-	}
-	return false;
-}
-
-function alternativasEstaoEmBrancoAtual() {
-	let competencia = competencias[competenciaAtual];
-	let tela = competencia[telaAtual];
-	let alternativas = tela.alternativas;
-	if (alternativas && alternativas.length) {
-		let temPreenchido = false;
-		for (let k = 0; k < alternativas.length; k++) {
-			if (alternativas[k].marcada) {
-				temPreenchido = true;
-				break;
-			}
-		}
-		if (!temPreenchido) {
-			return true;
-		}
-	}
-	return false;
-}
-
-function Finalizar() {
-	if (competenciaAtual < (competencias.length - 1) || telaAtual < (competencias[competenciaAtual].length - 1))
+async function Finalizar() {
+	if (fading || enviando || competenciaAtual < (competencias.length - 1) || telaAtual < (competencias[competenciaAtual].length - 1))
 		return;
 
 	armazenarAlternativasAtuais();
 
-	let questoesEmBranco = alternativasEstaoEmBranco();
+	let selecao = alternativasAtuais();
 
-	if(questoesEmBranco) {
+	if(!selecao.length) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Opa',
 			text: 'Você deixou alguma alternativa em branco'
 		  })
 	} else {
+		if (!await enviarAlternativas(selecao))
+			return;
+
 		main.innerHTML = `<div class="regras">
 		<div class="regras_titulo_fim">
 			<span>Parabéns pela conclusão 🥳</span>
@@ -130,34 +155,12 @@ function Finalizar() {
 		</div>
 	</div>`;
 	}
-
-	// testes insert
-	let opcoes = {
-		method = "POST",
-		body: new FormData(form)
-	}
-
-	try {
-		let response = await fetch("/cadastrarResposta", opcoes);
-
-		if (response.ok) {
-			// Limpa os campos para facilitar a criação da próxima pessoa.
-			form.reset();
-			// Limpa os erros e sucessos.
-			$(form).validate().resetForm();
-
-			Swal.fire("Sucesso!", "Pergunta cadastrada", "success");
-		} else {
-			Swal.fire("Erro!", "Ocorreu um erro na finalização", "error");
-		}
-	} catch (ex) {
-		Swal.fire("Erro!", "Erro de rede: " + ex.message, "error");
-	}
-	//
-
 }
 
 function renderTela() {
+	//main.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+	main.scrollTo(0, 0);
+
 	// @@@ fade in
 
 	const tela = competencias[competenciaAtual][telaAtual];

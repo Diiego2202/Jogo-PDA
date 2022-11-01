@@ -3,7 +3,7 @@ USE jogopda;
 
 CREATE TABLE IF NOT EXISTS usuario(
   idusuario BIGINT NOT NULL AUTO_INCREMENT,
-  dt INT NOT NULL,
+  dt DATETIME NOT NULL,
   PRIMARY KEY (idusuario)
 );
 
