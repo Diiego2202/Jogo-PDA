@@ -228,9 +228,22 @@ competencias[0] = [
 		]
 	},
 
-	{ // tela 2
+	{ // tela 3 - essa questão está muito esquisito...
 		urlImagem: "...",
-		descricao: "descricao 1"
+		titulo: "Titulo2",
+		descricao: "Descricao2",
+		alternativas: [
+			{
+				descricao: "2: alt1",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			},
+			{
+				descricao: "2:alt2",
+				valor: 0, // Rubrica? Métrica de avaliação?...?
+				marcada: false,
+			}
+		]
 	},
 
 	{ // tela 3 - essa questão está muito esquisito...
