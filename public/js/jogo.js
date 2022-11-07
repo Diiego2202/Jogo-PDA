@@ -27,20 +27,22 @@ function armazenarAlternativasAtuais() {
 }
 
 function alternativasAtuais() {
-	let selecao = [];
 	let competencia = competencias[competenciaAtual];
 	let tela = competencia[telaAtual];
 	let alternativas = tela.alternativas;
-	if (alternativas && alternativas.length) {
-		for (let k = 0; k < alternativas.length; k++) {
-			if (alternativas[k].marcada) {
-				selecao.push({
-					competencia: competenciaAtual,
-					pergunta: telaAtual,
-					resposta: k,
-					idusuario: idusuario
-				});
-			}
+	if (!alternativas || !alternativas.length)
+		return null;
+
+	let selecao = [];
+
+	for (let k = 0; k < alternativas.length; k++) {
+		if (alternativas[k].marcada) {
+			selecao.push({
+				competencia: competenciaAtual,
+				pergunta: telaAtual,
+				resposta: k,
+				idusuario: idusuario
+			});
 		}
 	}
 	return selecao;
@@ -108,14 +110,14 @@ async function irParaProxima() {
 
 	let selecao = alternativasAtuais();
 
-	if(!selecao.length) {
+	if (selecao && !selecao.length) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Opa',
 			text: 'Você deixou a questão em branco'
 		});
 	} else {
-		if (!await enviarAlternativas(selecao))
+		if (selecao && !await enviarAlternativas(selecao))
 			return;
 
 		telaAtual++;
@@ -135,14 +137,14 @@ async function Finalizar() {
 
 	let selecao = alternativasAtuais();
 
-	if(!selecao.length) {
+	if (selecao && !selecao.length) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Opa',
 			text: 'Você deixou alguma alternativa em branco'
 		  })
 	} else {
-		if (!await enviarAlternativas(selecao))
+		if (selecao && !await enviarAlternativas(selecao))
 			return;
 
 		main.innerHTML = `<div class="regras">
