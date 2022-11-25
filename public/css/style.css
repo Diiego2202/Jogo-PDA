@@ -67,13 +67,25 @@ body {
 
 img {
     display: inline-block;
-    vertical-align: top;
-    max-width: 100%;
+    vertical-align: center;
+    max-width: 65%;
+}
+
+.corpo_titulo {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+.corpo_descricao > p {
+    font-size: 1rem;
+    margin: 2rem 0;
+    line-height: 1.6rem;
 }
 
 .img_tela {
-    align-items: center;
     max-width: 100%;
+    text-align: center;
 }
 
 .visible {
@@ -88,7 +100,7 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);   
 }
 
 .botao_inicio button {
@@ -107,21 +119,40 @@ img {
     width: 33.75rem;
     background-color: #ffffff;
     border-radius: 0.3125rem;
+    
 }
 
 .regras .regras_titulo {
     height: 3.75rem;
     width: 100%;
     border-bottom: 0.0625rem solid #959595;
-    display: flex;
-    align-items: center;
     padding: 0 2.1875rem;
     font-size: 1.25rem;
     font-weight: 600;
+    
 }
+
+.regras .regras_titulo_fim {
+    height: 3.75rem;
+    width: 100%;
+    border-bottom: 0.0625rem solid #959595;
+    text-align: center;
+    padding: 0 2.1875rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    
+}
+
 
 .regras .regras_lista {
     padding: 0.9375rem 2.1875rem;
+}
+
+.regras .regras_lista_fim {
+    
+    padding: 0.9375rem 2.1875rem;
+    border-bottom: 0.0625rem solid #959595;
+    text-align: center;
 }
 
 .regras .regras_lista .informacao {
@@ -129,8 +160,10 @@ img {
     font-size: 1.0625rem;
 }
 
+
 .regras .regras_lista .informacao span {
     font-weight: 600;
+    text-align: center;
 }
 
 .regras .seguir {
@@ -188,7 +221,7 @@ img {
 
 .icone > span {
     position: absolute;
-    background-image: url(img/check.png);
+    background-image: url(../img/check.png);
     background-size: cover;
     background-position: center center;
     width: 100%;
@@ -210,7 +243,7 @@ img {
     margin: 0 0.3125rem;
     height: 1.6rem;
     width: 5.35rem;
-    border: 1px solid #8b0000;
+    border: 0.0625rem solid #8b0000;
     background: #8b0000;
     border-radius: 0.315rem;
     color: #ffffff;
@@ -225,4 +258,25 @@ img {
     align-items: center;
     justify-content: flex-end;
     padding: 0 2.1875rem;
+}
+
+.btn-final {
+    margin: 0 0.3125rem;
+    height: 1.6rem;
+    width: 5.35rem;
+    border: 0.0625rem solid #000000;
+    background: #000000;
+    border-radius: 0.315rem;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.fade {
+	opacity: 0;
+	-webkit-transition: opacity ease-in-out 0.5s;
+	-moz-transition: opacity ease-in-out 0.5s;
+	-o-transition: opacity ease-in-out 0.5s;
+	transition: opacity ease-in-out 0.5s;
 }
