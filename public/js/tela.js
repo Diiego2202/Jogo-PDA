@@ -129,11 +129,15 @@ setTimeout(function () {
 	let botao = document.getElementById("botao");
 
 	botao.onclick = function () {
+		if (fading)
+			return;
+
 		iniciar(); // jogo.js
 	};
 
 	cover.classList.remove("visible");
 	setTimeout(function () {
+		fading = false;
 		document.body.removeChild(cover);
 	}, 550);
 }, 100);

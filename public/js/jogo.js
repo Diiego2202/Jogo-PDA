@@ -3,7 +3,7 @@
 let competencias = new Array(4);
 let competenciaAtual = 0;
 let telaAtual = 0;
-let fading = false;
+let fading = true;
 let enviando = false;
 
 let encode = (function () {
@@ -49,7 +49,7 @@ function alternativasAtuais() {
 }
 
 function irParaAnterior() {
-	if (!competenciaAtual && !telaAtual)
+	if (fading || enviando || !competenciaAtual && !telaAtual)
 		return;
 
 	armazenarAlternativasAtuais();
@@ -65,7 +65,15 @@ function irParaAnterior() {
 
 async function enviarAlternativas(selecao) {
 	try {
-		// @@@ exibir spinner
+		// exibir spinner
+
+		Swal.fire({
+			html: 'Por favor, aguarde...',
+			backdrop: false,
+			didOpen: () => {
+				Swal.showLoading();
+			}
+		});
 
 		enviando = true;
 
@@ -98,7 +106,8 @@ async function enviarAlternativas(selecao) {
 		return false;
 	} finally {
 		enviando = false;
-		// @@@ ocultar spinner
+		// ocultar spinner
+		Swal.close();
 	}
 }
 
@@ -159,18 +168,54 @@ async function Finalizar() {
 	}
 }
 
-function renderTela() {
+function fadeIn() {
+	if (fading)
+		return Promise.resolve();
+
+	fading = true;
+
+	return new Promise(function (resolve) {
+		cover.classList.remove("visible");
+		document.body.appendChild(cover);
+		setTimeout(function () {
+			cover.classList.add("visible");
+			setTimeout(function () {
+				fading = false;
+				resolve();
+			}, 550);
+		}, 100);
+	});
+}
+
+function fadeOut() {
+	if (fading)
+		return Promise.resolve();
+
+	fading = true;
+
+	return new Promise(function (resolve) {
+		cover.classList.remove("visible");
+		setTimeout(function () {
+			fading = false;
+			document.body.removeChild(cover);
+			resolve();
+		}, 550);
+	});
+}
+
+async function renderTela() {
+	// @@@ Pergunta do tipo num (p1) deixar N input type number, em vez de checkbox
+	await fadeIn();
+
 	//main.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 	main.scrollTo(0, 0);
-
-	// @@@ fade in
 
 	const tela = competencias[competenciaAtual][telaAtual];
 
 	let html = `<div class="corpo">`;
 
 	if (tela.titulo) {
-		// @@@ criar HTML para o título
+		// criar HTML para o título
 		html += `<p class="corpo_titulo">${encode(tela.titulo)}</p>`;
 	}
 
@@ -180,12 +225,12 @@ function renderTela() {
 	
 
 	if (tela.descricao) {
-		// @@@ criar HTML para a descrição
+		// criar HTML para a descrição
 		html += `<div class="corpo_descricao">${tela.descricao}</div>`;
 	}
 
 	if (tela.alternativas && tela.alternativas.length) {
-		// @@@ criar HTML para as alternativas
+		// criar HTML para as alternativas
 		for (let i = 0; i < tela.alternativas.length; i++) {
 			html += `<p><label class="chk-verde"><input id="itemCheck${i}" type="checkbox" ${(tela.alternativas[i].marcada ? 'checked="checked"' : '')} class="chk"><span class="icone"><span></span></span>
 						${encode(tela.alternativas[i].descricao)}
@@ -209,7 +254,7 @@ function renderTela() {
 
 	main.innerHTML = html;
 
-	// @@@ fade out
+	await fadeOut();
 }
 
 function iniciar() {

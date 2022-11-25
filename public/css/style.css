@@ -43,8 +43,8 @@ body {
     z-index: 10000;
     left: 0;
     top: 0;
-    width: 0.25rem;
-    height: 0.25rem;
+    width: 4px;
+    height: 4px;
     -webkit-transform-origin: left top;
     -moz-transform-origin: left top;
     transform-origin: left top;
@@ -279,4 +279,10 @@ img {
 	-moz-transition: opacity ease-in-out 0.5s;
 	-o-transition: opacity ease-in-out 0.5s;
 	transition: opacity ease-in-out 0.5s;
+}
+
+#aviso {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
 }
