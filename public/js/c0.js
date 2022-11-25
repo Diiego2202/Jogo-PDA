@@ -152,13 +152,11 @@ competencias[0] = [
 
 	{ // tela "4" - essa questão está muito esquisito...
 		urlImagem: "/public/img/nave.jpeg",
-		titulo: "DESAFIO 5: [Combinar Ideias]",
+		titulo: "DESAFIO 4: [Compreender sua própria forma de aprendizagem] ",
 		descricao: `
 		<p>
-			[Balão de Texto] – Você é enviado para uma nova área do planeta, a Biomind. Na Biomind buscamos ideias criativas para que a transição para o habitat de T0I700d seja feita de maneira natural e sustentável, de forma a construir uma mentalidade para a qual essa adaptação seja moldada. Há muito o que ser discutido e debatido sobre uma forma harmônica de se habitar esse novo local, de uma maneira que seja boa tanto para a comunidade futura quanto para o meio ambiente do planeta em si. Em seguida o doutor Leonel Carosello, vai explicar um pouco mais e pedir sugestões ou opiniões sobre determinados assuntos.
-		</p>
-		<p>
-			DR. LEONEL CAROSELLO:
+			DRA. EMMA SCHULTZ: “O contato com a espécie de roedor parecido com um porquinho da Índia do planeta, relatado em desafios anteriores é mais um passo para se entender a natureza local. O conhecimento é essencial para podermos entender mais sobre o novo planeta o qual estamos desbravando. Precisamos aprender sobre a natureza e a vida do planeta, a fim de podermos viver nele de maneira sustentável e segura. ”		</p>
+		
 		</p>
 		<p>
 			QUESTÃO- Há muitos desafios envolvendo a habitação de um novo planeta. Primeiro precisamos controlar o impacto ambiental de modo que nossa presença não afete negativamente o planeta, também precisamos promover uma habitação segura para os seres humanos. Outros desafios também surgem com isso, como por exemplo, a criação de uma organização de sociedade e de regras para a convivência entre as pessoas e a natureza. Diante de tantos desafios, buscamos sugestões daqueles que mais serão impactados por essas decisões: vocês, futuros visitantes ou habitantes de T0I700d. Em sua opinião como devem ser os planos realizados para essa difícil tarefa?
@@ -166,80 +164,67 @@ competencias[0] = [
 		`,
 		alternativas: [
 			{
-				descricao: " Os desafios encontrados são muito diversos entre si. Seria impossível resolvê-los de forma conjunta, é preciso tratar cada assunto como uma coisa única sem misturar os planos e ideias. Somente fazendo essa divisão e atacando cada problema por vez é possível chegar a uma solução.",
+				descricao: " Não há outras formas de aprendizado que não o estudo acadêmico, portanto, quaisquer outras maneiras são inválidas. ",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " Para contornar esses desafios é necessária a criação de um plano que não só combine diferentes ideias sobre os problemas já conhecidos, mas que também antecipe outros futuros obstáculos a serem encontrados na ocupação do planeta.",
+				descricao: " A forma de aprendizado pela qual é possível formular teorias a partir do encontro com o roedor é denominada empirismo.",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " Deveria haver uma espécie de guia de possibilidades futuras para que eu e o restante da comunidade pudéssemos desenvolver ideias.",
+				descricao: " Há diferentes formas de se aprender, no entanto experiências puramente empíricas não geram conhecimento algum.",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " Podemos combinar diferentes ideias a fim de obter soluções que abranjam mais de um problema. ",
+				descricao: " Todas as maneiras de aprender são essencialmente a mesma, uma vez que todas que todas proporcionam o mesmo fim – o conhecimento.  ",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " Há problemas que são inerentes ao desenvolvimento de uma sociedade e se faz necessário escolher prioridades. É impossível promover o desenvolvimento sem causar grandes impactos, portanto deve-se estabelecer qual problema é prioritário a fim de estabelecer um plano.",
+				descricao: " Podemos aprender a partir de livros, aulas, experimentos científicos e também, a partir de encontros sensoriais, como o encontro com o roedor.",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " A sugestão de planos, táticas ou soluções propostas pelos habitantes deveriam partir única e exclusivamente de problemas orientados por cientistas ou pessoas mais entendidas do assunto.",
+				descricao: " A busca por conhecimento é fundamental e ela pode se dar de diferentes formas, dentre elas o exemplo do contato com o roedor proporciona observações empíricas. A fim de expandir esse conhecimento é preciso então partir para estudos científicos e realizar pesquisas. ",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " Precisamos buscar, de maneira interconectada, ideias que contornem esses problemas. Por exemplo, meios de desenvolver a civilização no local ao mesmo tempo em que se preserve o meio ambiente. Essas ideias podem ainda se conectar com outros assuntos, como por exemplo a forma com que a arquitetura local será construída, ou até mesmo, com o modo com que se dá a exploração de novas áreas.",
+				descricao: " Dentre as diferentes formas de se aprender, o encontro com o roedor é uma que nos proporciona criar teorias e ter novas ideias sobre o animal a partir de experiências sensoriais. ",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " É possível por exemplo, tentar buscar a combinação entre ideias que gerem a sustentabilidade da natureza do planeta e também ideias que busquem promover a habitação local. Como, por exemplo, construir casas que não agridam o meio ambiente e usem energias limpas como a solar.",
+				descricao: " É possível se aprender de muitas formas, no entanto não é possível identificar de que maneira o encontro com o roedor influencia na aprendizagem. ",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " Não há cabimento para que a comunidade do planeta dê sugestões para esses tipos de problemas, uma vez que ela é incapaz de ter e combinar ideias sem que haja o auxílio de profissionais.",
+				descricao: " O encontro com o roedor nos ensina a partir da experiência física e sensorial, mas a pesquisa deve continuar buscando outros ramos como por exemplo a formulação de métodos científicos para entender mais sobre o comportamento do animal. Dessa forma, é possível se aprender mais e entender outros aspectos sobre o ser. ",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " É necessário para que haja uma solução não somente combinação de diferentes ideias de diferentes áreas, mas também a constante busca por novas perspectivas e planos para contornar futuros problemas.",
+				descricao: " Apenas é possível aprender sobre o planeta por meio da formulação de estudos com métodos científico, sendo quaisquer outras experiências inválidas.",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " Não é possível propor ideias ou planos no momento. Os problemas vão surgindo na hora, conforme as coisas vão acontecendo, de maneira que as decisões devem ser tomadas de maneira situacional.",
+				descricao: " O conhecimento pode e deve ser explorado por diversos caminhos a fim de se obter um maior aprendizado sobre um objeto. A experiência proveniente do contato com o roedor, não deve se restringir a ser a única forma de se aprender sobre ele, dessa forma podemos buscar caminhos para entendê-lo, como por exemplo estudando seu comportamento.",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			},
 			{
-				descricao: " O projeto ideal precisa combinar diferentes ideias para atingir o resultado final. Em vez de se combater individualmente cada problema, podemos combinar planos para diferentes questões e uni-los a fim de criar soluções.",
+				descricao: " Tendo em vista diversas formas de aprendizado existentes, o encontro com o roedor não se enquadra em nenhuma delas, ainda que se possam tirar conclusões sobre esse encontro.",
 				valor: 0, // Rubrica? Métrica de avaliação?...?
 				marcada: false,
 			}
 		]
 	},
 
-	{ // tela 3 - essa questão está muito esquisito...
-		urlImagem: "...",
-		titulo: "Titulo2",
-		descricao: "Descricao2",
-	},
-
-	{ // tela 3 - essa questão está muito esquisito...
-		urlImagem: "...",
-		titulo: "Titulo2",
-		descricao: "Descricao2",
-	},
-
 	
-	// ...
 ];
