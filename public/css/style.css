@@ -79,7 +79,7 @@ img {
 }
 .corpo_descricao > p {
     font-size: 1rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
     line-height: 1.6rem;
 }
 
@@ -204,6 +204,11 @@ img {
     top: 0;
 }
 
+.input-q1 {
+    margin-top: 0.75rem;
+    max-width: 100px;  
+}
+
 .icone {
     display: inline-block;
     position: relative;
@@ -285,4 +290,9 @@ img {
     color: #fff;
     font-weight: bold;
     text-align: center;
+}
+
+li {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }

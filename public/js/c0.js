@@ -4,6 +4,62 @@
 
 competencias[0] = [
 
+	{ // tela "1"
+		urlImagem : "/public/img/nave.jpeg",
+		titulo: "DESAFIO 1: [Explorar Conhecimentos]",
+		numerica: true,
+		descricao: `
+			<p>
+				Seu primeiro desafio é participar de uma entrevista com a cientista alemã Dra. Emma Schulz, a administradora setorial mais antiga da Ilha Um, conhecida por conquistar o prêmio Nobel da Vida e pelos inúmeros estudos sobre a valorização da vida e da diversidade. 
+			</p>
+			<p>
+				A primeira pergunta formulada pela cientista e direcionada para o estudante é:
+			</p>
+			<p>
+				- Como você busca o conhecimento? 
+			</p>
+			<p>
+				Enumere por ordem....
+			</p>
+			<ol>
+				<li>Em livros e artigos científicos</li>
+				<li>Em séries, filmes, jogos</li>
+				<li>Em conjunto com professores</li>
+				<li>Com ajuda de professores</li>
+				<li>Em colaboração com colegas de estudo</li>
+				<li>Em redes sociais</li>
+				<li>Observando a manipulação das informações</li>
+				<li>Aleatoriamente</li>
+				<li>Não preciso fazer esforço para explorar conhecimentos</li>
+				<li>Nas experiências que vivo em sociedade</li>
+				<li>A partir da minha formação educacional</li>
+				<li>A partir da minha história de vida</li>
+			</ol>
+		`,
+		alternativas: [
+			{
+				descricao: "Primeira opção (mais prioritária)",
+				valor: 0,
+				marcada: 0,
+			},
+			{
+				descricao: "Segunda opção",
+				valor: 0,
+				marcada: 0,
+			},
+			{
+				descricao: "Terceira opção",
+				valor: 0,
+				marcada: 0,
+			},
+			{
+				descricao: "Quarta opção (menos prioritária)",
+				valor: 0,
+				marcada: 0,
+			},
+		]
+	}, 
+
 	{ // tela "2"
 		urlImagem : "/public/img/nave.jpeg",
 		titulo: "DESAFIO 2: [Combinar Teorias]",

@@ -19,10 +19,14 @@ let encode = (function () {
 function armazenarAlternativasAtuais() {
 	const tela = competencias[competenciaAtual][telaAtual];
     if (tela.alternativas && tela.alternativas.length) {
-        for (let i = 0; i < tela.alternativas.length; i++) {
+		for (let i = 0; i < tela.alternativas.length; i++) {
 			let item = document.getElementById("itemCheck" + i);
-			tela.alternativas[i].marcada = item.checked;
-        }
+			if (tela.numerica) {
+				tela.alternativas[i].marcada = parseInt(item.value) || 0;
+			} else {
+				tela.alternativas[i].marcada = (item.checked ? 1 : 0);
+			}
+		}
     }
 }
 
@@ -40,7 +44,8 @@ function alternativasAtuais() {
 			selecao.push({
 				competencia: competenciaAtual,
 				pergunta: telaAtual,
-				resposta: k,
+				alternativa: k,
+				valor: alternativas[k].marcada,
 				idusuario: idusuario
 			});
 		}
@@ -204,7 +209,6 @@ function fadeOut() {
 }
 
 async function renderTela() {
-	// @@@ Pergunta do tipo num (p1) deixar N input type number, em vez de checkbox
 	await fadeIn();
 
 	//main.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -231,10 +235,18 @@ async function renderTela() {
 
 	if (tela.alternativas && tela.alternativas.length) {
 		// criar HTML para as alternativas
-		for (let i = 0; i < tela.alternativas.length; i++) {
-			html += `<p><label class="chk-verde"><input id="itemCheck${i}" type="checkbox" ${(tela.alternativas[i].marcada ? 'checked="checked"' : '')} class="chk"><span class="icone"><span></span></span>
+		if (tela.numerica) {
+			for (let i = 0; i < tela.alternativas.length; i++) {
+				html += `<p><label class="chk-verde" for="itemCheck${i}">${encode(tela.alternativas[i].descricao)}</label><br/>
+						<input class="input-q1 form-control" id="itemCheck${i}" type="number" value="${tela.alternativas[i].marcada}" />
+					</p>`;
+			}
+		} else {
+			for (let i = 0; i < tela.alternativas.length; i++) {
+				html += `<p><label class="chk-verde"><input id="itemCheck${i}" type="checkbox" ${(tela.alternativas[i].marcada ? 'checked="checked"' : '')} class="chk"/><span class="icone"><span></span></span>
 						${encode(tela.alternativas[i].descricao)}
-					</input></label></p>`;
+					</label></p>`;
+			}
 		}
 	}
 

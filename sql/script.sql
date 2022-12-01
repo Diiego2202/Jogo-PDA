@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS registro (
   idregistro BIGINT NOT NULL AUTO_INCREMENT,
   competencia INT NOT NULL,
   pergunta INT NOT NULL,
-  resposta INT NOT NULL,
+  alternativa INT NOT NULL,
+  valor INT NOT NULL,
   idusuario BIGINT NOT NULL,
   PRIMARY KEY (idregistro),
   CONSTRAINT registro_usuario

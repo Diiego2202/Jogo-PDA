@@ -4,7 +4,8 @@ interface Resposta {
 	idregistro: number;
 	competencia: number;
 	pergunta: number;
-	resposta: number;
+	alternativa: number;
+	valor: number;
 	idusuario: number;
 }
 
@@ -70,7 +71,7 @@ class IndexRoute {
 			const competencia = novas[0].competencia;
 			const pergunta = novas[0].pergunta;
 
-			const antigas: Resposta[] = (await sql.query("select idregistro, competencia, pergunta, resposta, idusuario from registro where competencia = ? and pergunta = ? and idusuario = ?", [competencia, pergunta, idusuario])) || []
+			const antigas: Resposta[] = (await sql.query("select idregistro, competencia, pergunta, alternativa, valor, idusuario from registro where competencia = ? and pergunta = ? and idusuario = ?", [competencia, pergunta, idusuario])) || []
 			const atualizar: Resposta[] = [];
 
 			for (let i = antigas.length - 1; i >= 0; i--) {
@@ -78,7 +79,11 @@ class IndexRoute {
 
 				for (let j = novas.length - 1; j >= 0; j--) {
 					const nova = novas[j];
-					if (antiga.resposta == nova.resposta) {
+					if (antiga.alternativa == nova.alternativa) {
+						if (antiga.valor != nova.valor) {
+							antiga.valor = nova.valor;
+							atualizar.push(antiga);
+						}
 						antigas.splice(i, 1);
 						novas.splice(j, 1);
 						break;
@@ -92,7 +97,8 @@ class IndexRoute {
 					break;
 
 				const antiga = antigas.pop();
-				antiga.resposta = novas[i].resposta;
+				antiga.alternativa = novas[i].alternativa;
+				antiga.valor = novas[i].valor;
 
 				atualizar.push(antiga);
 
@@ -103,10 +109,10 @@ class IndexRoute {
 				await sql.query("delete from registro where idregistro = ?", [antigas[i].idregistro]);
 
 			for (let i = atualizar.length - 1; i >= 0; i--)
-				await sql.query("update registro set resposta = ? where idregistro = ?", [atualizar[i].resposta, atualizar[i].idregistro]);
+				await sql.query("update registro set alternativa = ?, valor = ? where idregistro = ?", [atualizar[i].alternativa, atualizar[i].valor, atualizar[i].idregistro]);
 
 			for (let i = novas.length - 1; i >= 0; i--)
-				await sql.query("insert into registro (competencia, pergunta, resposta, idusuario) values (?, ?, ?, ?)", [competencia, pergunta, novas[i].resposta, idusuario]);
+				await sql.query("insert into registro (competencia, pergunta, alternativa, valor, idusuario) values (?, ?, ?, ?, ?)", [competencia, pergunta, novas[i].alternativa, novas[i].valor, idusuario]);
 
 			await sql.commit();
 		});
