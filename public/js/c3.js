@@ -5,7 +5,7 @@
 competencias[3] = [
 
 	{ // tela 11 - essa questão está muito esquisito...
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem: root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 11: [Respeitar normas éticas]",
 		descricao: `
 		<p>
@@ -98,7 +98,7 @@ competencias[3] = [
 	},
 
 	{ // tela 12 - essa questão está muito esquisito...
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem: root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 12: [Reconhecer a diversidade de pensamentos]",
 		descricao: `
 		<p>
@@ -190,7 +190,7 @@ competencias[3] = [
 	},
 
 	{ // tela 13
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem: root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 13: [Avaliar os impactos das decisões.]",
 		descricao: `
 		<p>

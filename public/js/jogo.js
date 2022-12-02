@@ -82,7 +82,7 @@ async function enviarAlternativas(selecao) {
 
 		enviando = true;
 
-		const response = await fetch("/cadastrarResposta", {
+		const response = await fetch(root + "/cadastrarResposta", {
 			method: "POST",
 			body: JSON.stringify(selecao),
 			headers: {

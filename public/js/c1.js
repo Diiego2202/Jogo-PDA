@@ -5,7 +5,7 @@
 competencias[1] = [
 
 	{ // tela "5" - essa questão está muito esquisito...
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem: root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 5: [Combinar Ideias]",
 		descricao: `
 		<p>
@@ -83,7 +83,7 @@ competencias[1] = [
 	},
 
 	{ // tela 6 - essa questão está muito esquisito...
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem: root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 6: [Defender Ideias] ",
 		descricao: `
 		<p>
@@ -161,7 +161,7 @@ competencias[1] = [
 	},
 
 	{ // tela 7
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem: root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 7: [Propor soluções] ",
 		descricao: `
 		<p>

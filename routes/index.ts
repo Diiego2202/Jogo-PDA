@@ -26,6 +26,23 @@ class IndexRoute {
 		});
 	}
 
+	public async registros(req: app.Request, res: app.Response){
+		let dados: any[];
+
+		await app.sql.connect(async (sql) => {
+			dados = await sql.query(`
+			select r.idusuario, r.competencia, r.pergunta, r.alternativa, r.valor, date_format(u.dt, '%d/%m/%Y %H:%i') data
+			from registro r
+			inner join usuario u on u.idusuario = r.idusuario
+			order by u.dt, r.competencia, r.pergunta, r.alternativa, r.valor
+			`);
+		});
+
+		res.render("index/registros", {
+			dados: dados
+		});
+	}
+
 	@app.http.post()
 	@app.route.formData()
 	public async cadastrarResposta(req: app.Request, res: app.Response){

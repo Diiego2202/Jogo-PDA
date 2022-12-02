@@ -3,7 +3,7 @@
 competencias[2] = [
 	
 	{ // tela 8
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem: root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 8: [Compreender o funcionamento da Tecnologia] ",
 		descricao: `
 		<p>
@@ -89,7 +89,7 @@ competencias[2] = [
 	},
 	
 	{ // tela 9 - essa questão está muito esquisito...
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem: root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 9: [Organizar Dados]",
 		descricao: `
 		<p>
@@ -173,7 +173,7 @@ competencias[2] = [
 	},
 
 	{ // tela 10
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem: root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 10: [Criar soluções utilizando a tecnologia]",
 		descricao: `
 		<p>

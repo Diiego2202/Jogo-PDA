@@ -1,0 +1,50 @@
+<div class="p-5" style="max-width: 1000px; margin-left: auto; margin-right: auto;">
+	<table class="table table-table table-flush table-striped table-hover">
+		<thead>
+			<tr>
+				<td>
+					Data
+				</td>
+				<td>
+					Usuário
+				</td>
+				<td>
+					Competência
+				</td>
+				<td>
+					Desafio
+				</td>
+				<td>
+					Alternativa
+				</td>
+				<td>
+					Valor
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<% for (let i = 0; i < dados.length; i++) { %>
+			<tr>
+				<td>
+					<%= dados[i].data %>
+				</td>
+				<td>
+					<%= dados[i].idusuario %>
+				</td>
+				<td>
+					<%= (dados[i].competencia + 1) %>
+				</td>
+				<td>
+					<%= (dados[i].pergunta + 1) %>
+				</td>
+				<td>
+					<%= (dados[i].alternativa + 1) %>
+				</td>
+				<td>
+					<%= dados[i].valor %>
+				</td>
+			</tr>
+			<% } %>
+		</tbody>
+	</table>
+</div>

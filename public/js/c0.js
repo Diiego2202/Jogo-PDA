@@ -5,7 +5,7 @@
 competencias[0] = [
 
 	{ // tela "1"
-		urlImagem : "/public/img/nave.jpeg",
+		urlImagem : root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 1: [Explorar Conhecimentos]",
 		numerica: true,
 		descricao: `
@@ -61,7 +61,7 @@ competencias[0] = [
 	}, 
 
 	{ // tela "2"
-		urlImagem : "/public/img/nave.jpeg",
+		urlImagem : root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 2: [Combinar Teorias]",
 		descricao: `
 			<p>
@@ -134,7 +134,7 @@ competencias[0] = [
 	}, 
 
 	{ // tela "3" - essa questão está muito esquisito...
-		urlImagem : "/public/img/nave.jpeg",
+		urlImagem : root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 3: [Utilizar conhecimentos prévios]",
 		descricao: `
 			<p>
@@ -207,7 +207,7 @@ competencias[0] = [
 	},
 
 	{ // tela "4" - essa questão está muito esquisito...
-		urlImagem: "/public/img/nave.jpeg",
+		urlImagem: root + "/public/img/nave.jpeg",
 		titulo: "DESAFIO 4: [Compreender sua própria forma de aprendizagem] ",
 		descricao: `
 		<p>
